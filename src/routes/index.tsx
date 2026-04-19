@@ -185,8 +185,9 @@ function Home() {
           <div className="glass rounded-3xl p-8 md:p-12 shadow-soft">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
               {districts.map((d) => (
-                <div key={d} className="bg-white/70 border border-navy/5 rounded-xl px-3 py-2.5 text-center text-sm font-medium text-navy hover:bg-gradient-orange hover:text-white hover:border-transparent transition cursor-default">
-                  <MapPin className="h-3.5 w-3.5 inline mr-1 opacity-60" />{d}
+                <div key={d} className="bg-white/70 border border-navy/5 rounded-xl px-3 py-2.5 text-sm font-medium text-navy hover:bg-gradient-orange hover:text-white hover:border-transparent transition cursor-default flex items-center justify-center gap-1.5 min-w-0">
+                  <MapPin className="h-3.5 w-3.5 shrink-0 opacity-60" />
+                  <span className="truncate">{d}</span>
                 </div>
               ))}
             </div>
