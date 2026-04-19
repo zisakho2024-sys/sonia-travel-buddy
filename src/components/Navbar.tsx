@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, ChevronDown, MapPin } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "../assets/logo.jpeg";
 
 const legalLinks = [
   { to: "/terms", label: "Terms & Conditions" },
@@ -17,8 +18,8 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
       <nav className="glass mx-auto max-w-6xl rounded-2xl px-5 py-3 shadow-card flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-bold text-navy">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-orange text-white shadow-glow">
-            <MapPin className="h-5 w-5" />
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl overflow-hidden bg-white shadow-card">
+            <img src={logo} alt="Sonia Buddy" className="h-full w-full object-contain" />
           </span>
           <span className="text-lg tracking-tight">Sonia Buddy</span>
         </Link>
