@@ -57,7 +57,7 @@ const stats = [
 const faqs = [
   { tag: "App Usage", icon: Smartphone, q: "How do I set a destination alert?", a: "Simply search for your bus route, select your destination stop, and toggle the \"Smart Alert\" button. Sonia Buddy will notify you via sound and vibration before you arrive." },
   { tag: "Bus Data", icon: Database, q: "Are the bus timings accurate?", a: "We use ground-level verified data for 23 districts of West Bengal. However, timings may vary slightly due to real-time traffic conditions." },
-  { tag: "Safety", icon: Shield, q: "Why does the app ask for background location?", a: "Background location is essential for our \"Smart Alert\" feature. It allows the app to track your distance from the stop even if your phone is locked or you are using another app." },
+  { tag: "Safety", icon: Shield, q: "Does the app use background location?", a: "No. Sonia Buddy only accesses your location while the app is open, to detect proximity to your selected bus stop. We do not track location in the background." },
   { tag: "General", icon: HelpCircle, q: "Is Sonia Buddy available in Bengali?", a: "Yes! Sonia Buddy is designed for West Bengal and supports both English and Bengali languages for a smoother user experience." },
   { tag: "Privacy", icon: Lock, q: "How can I delete my data?", a: "Your privacy is our priority. You can request data deletion through the \"Account Deletion\" link in the footer or by emailing zisakhoofficial@gmail.com." },
 ];
