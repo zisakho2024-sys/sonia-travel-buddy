@@ -186,8 +186,8 @@
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid oklch(1 0 0 / 0.1);
   }
-  .bg-gradient-hero { background: var(--gradient-hero); }
-  .bg-gradient-orange { background: var(--gradient-orange); }
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .bg-gradient-orange { background-image: var(--gradient-orange); background-color: oklch(0.74 0.18 55); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
   .shadow-card { box-shadow: var(--shadow-card); }
