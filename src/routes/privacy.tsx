@@ -20,9 +20,9 @@ function Privacy() {
 
       <h2>1. Information We Collect</h2>
       <ul>
-        <li><strong>Location Data:</strong> To provide real-time bus tracking and "Smart Geofence Alerts," our app requires access to your device's location. This includes background location access to alert you even when the screen is off or the app is not in active use.</li>
-        <li><strong>Personal Information:</strong> We may collect basic details such as your name, phone number, or email address if you register an account or book a tour through our partners.</li>
-        <li><strong>Device Information:</strong> We collect technical data like device model, OS version, and unique identifiers to improve app performance and notification delivery.</li>
+        <li><strong>Location Data:</strong> We only access your device's location to enable bus stop tracking and "Smart Geofence Alerts." We do <strong>not</strong> use background GPS access and we do <strong>not</strong> perform real-time bus tracking.</li>
+        <li><strong>Personal Information:</strong> We only collect your <strong>Gmail (email address)</strong> when you register or book a tour through our partners. We do <strong>not</strong> collect your mobile number.</li>
+        <li><strong>No Device Information:</strong> We do not collect technical device data such as model, OS version, or unique identifiers.</li>
       </ul>
 
       <h2>2. How We Use Your Information</h2>
@@ -33,8 +33,8 @@ function Privacy() {
         <li>To improve our Sonia Buddy database and regional transportation tracking in West Bengal.</li>
       </ul>
 
-      <h2>3. Background Location Usage</h2>
-      <p>Our app's core feature is to notify you before you miss your stop. To do this accurately, the app tracks your location in the <strong>background</strong>. You can enable or disable this permission at any time through your device settings.</p>
+      <h2>3. Location Usage (Foreground Only)</h2>
+      <p>Sonia Buddy uses your location <strong>only while the app is open</strong> to detect proximity to your selected bus stop. We do <strong>not</strong> track your location in the background. You can enable or disable location permission at any time through your device settings.</p>
 
       <h2>4. Data Sharing & Third Parties</h2>
       <p>We do not sell your personal data. We only share information with:</p>

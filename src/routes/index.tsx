@@ -5,6 +5,17 @@ import {
   Smartphone, Shield, Database, HelpCircle, Lock, Send, Bot,
 } from "lucide-react";
 import heroMockup from "../assets/hero-mockup.png";
+import victoriaMemorial from "../assets/victoria-memorial.jpg";
+import darjeeling from "../assets/darjeeling.jpg";
+import digha from "../assets/digha.jpg";
+import sundarbans from "../assets/sundarbans.jpg";
+
+const touristPlaces = [
+  { img: victoriaMemorial, name: "Victoria Memorial Hall", city: "Kolkata", desc: "Iconic white marble monument and museum surrounded by lush gardens." },
+  { img: darjeeling, name: "Darjeeling Tea Hills", city: "Darjeeling", desc: "Misty Himalayan views, toy trains and world-famous tea estates." },
+  { img: digha, name: "Digha Sea Beach", city: "Purba Medinipur", desc: "Golden sunsets and gentle waves on Bengal's favorite coastline." },
+  { img: sundarbans, name: "Sundarbans Mangroves", city: "South 24 Parganas", desc: "UNESCO mangrove forest, home of the Royal Bengal Tiger." },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,7 +57,7 @@ const stats = [
 const faqs = [
   { tag: "App Usage", icon: Smartphone, q: "How do I set a destination alert?", a: "Simply search for your bus route, select your destination stop, and toggle the \"Smart Alert\" button. Sonia Buddy will notify you via sound and vibration before you arrive." },
   { tag: "Bus Data", icon: Database, q: "Are the bus timings accurate?", a: "We use ground-level verified data for 23 districts of West Bengal. However, timings may vary slightly due to real-time traffic conditions." },
-  { tag: "Safety", icon: Shield, q: "Why does the app ask for background location?", a: "Background location is essential for our \"Smart Alert\" feature. It allows the app to track your distance from the stop even if your phone is locked or you are using another app." },
+  { tag: "Safety", icon: Shield, q: "Does the app use background location?", a: "No. Sonia Buddy only accesses your location while the app is open, to detect proximity to your selected bus stop. We do not track location in the background." },
   { tag: "General", icon: HelpCircle, q: "Is Sonia Buddy available in Bengali?", a: "Yes! Sonia Buddy is designed for West Bengal and supports both English and Bengali languages for a smoother user experience." },
   { tag: "Privacy", icon: Lock, q: "How can I delete my data?", a: "Your privacy is our priority. You can request data deletion through the \"Account Deletion\" link in the footer or by emailing zisakhoofficial@gmail.com." },
 ];
@@ -174,11 +185,39 @@ function Home() {
           <div className="glass rounded-3xl p-8 md:p-12 shadow-soft">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
               {districts.map((d) => (
-                <div key={d} className="bg-white/70 border border-navy/5 rounded-xl px-3 py-2.5 text-center text-sm font-medium text-navy hover:bg-gradient-orange hover:text-white hover:border-transparent transition cursor-default">
-                  <MapPin className="h-3.5 w-3.5 inline mr-1 opacity-60" />{d}
+                <div key={d} className="bg-white/70 border border-navy/5 rounded-xl px-3 py-2.5 text-sm font-medium text-navy hover:bg-gradient-orange hover:text-white hover:border-transparent transition cursor-default flex items-center justify-center gap-1.5 min-w-0">
+                  <MapPin className="h-3.5 w-3.5 shrink-0 opacity-60" />
+                  <span className="truncate">{d}</span>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TOURIST PLACES */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-orange font-semibold text-sm uppercase tracking-wider">Explore Bengal</span>
+            <h2 className="mt-3 text-4xl md:text-5xl font-bold text-navy text-balance">Iconic places, one ticket away.</h2>
+            <p className="mt-4 text-navy/65">From Kolkata's Victoria Memorial Hall to the Sundarbans — Sonia Buddy gets you there.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {touristPlaces.map((p) => (
+              <div key={p.name} className="group bg-white rounded-2xl overflow-hidden shadow-card border border-navy/5 hover:shadow-glow hover:-translate-y-1 transition-all">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={p.img} alt={p.name} loading="lazy" width={1280} height={832} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-5">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-orange uppercase tracking-wider">
+                    <MapPin className="h-3 w-3" /> {p.city}
+                  </span>
+                  <h3 className="mt-1.5 text-lg font-bold text-navy">{p.name}</h3>
+                  <p className="mt-1 text-sm text-navy/65 leading-relaxed">{p.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
