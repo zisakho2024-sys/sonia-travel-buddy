@@ -195,6 +195,33 @@ function Home() {
         </div>
       </section>
 
+      {/* TOURIST PLACES */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-orange font-semibold text-sm uppercase tracking-wider">Explore Bengal</span>
+            <h2 className="mt-3 text-4xl md:text-5xl font-bold text-navy text-balance">Iconic places, one ticket away.</h2>
+            <p className="mt-4 text-navy/65">From Kolkata's Victoria Memorial Hall to the Sundarbans — Sonia Buddy gets you there.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {touristPlaces.map((p) => (
+              <div key={p.name} className="group bg-white rounded-2xl overflow-hidden shadow-card border border-navy/5 hover:shadow-glow hover:-translate-y-1 transition-all">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={p.img} alt={p.name} loading="lazy" width={1280} height={832} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-5">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-orange uppercase tracking-wider">
+                    <MapPin className="h-3 w-3" /> {p.city}
+                  </span>
+                  <h3 className="mt-1.5 text-lg font-bold text-navy">{p.name}</h3>
+                  <p className="mt-1 text-sm text-navy/65 leading-relaxed">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ABOUT */}
       <section id="about" className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
