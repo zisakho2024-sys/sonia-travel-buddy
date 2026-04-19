@@ -5,6 +5,17 @@ import {
   Smartphone, Shield, Database, HelpCircle, Lock, Send, Bot,
 } from "lucide-react";
 import heroMockup from "../assets/hero-mockup.png";
+import victoriaMemorial from "../assets/victoria-memorial.jpg";
+import darjeeling from "../assets/darjeeling.jpg";
+import digha from "../assets/digha.jpg";
+import sundarbans from "../assets/sundarbans.jpg";
+
+const touristPlaces = [
+  { img: victoriaMemorial, name: "Victoria Memorial Hall", city: "Kolkata", desc: "Iconic white marble monument and museum surrounded by lush gardens." },
+  { img: darjeeling, name: "Darjeeling Tea Hills", city: "Darjeeling", desc: "Misty Himalayan views, toy trains and world-famous tea estates." },
+  { img: digha, name: "Digha Sea Beach", city: "Purba Medinipur", desc: "Golden sunsets and gentle waves on Bengal's favorite coastline." },
+  { img: sundarbans, name: "Sundarbans Mangroves", city: "South 24 Parganas", desc: "UNESCO mangrove forest, home of the Royal Bengal Tiger." },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
