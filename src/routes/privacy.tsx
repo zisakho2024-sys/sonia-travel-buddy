@@ -33,8 +33,8 @@ function Privacy() {
         <li>To improve our Sonia Buddy database and regional transportation tracking in West Bengal.</li>
       </ul>
 
-      <h2>3. Background Location Usage</h2>
-      <p>Our app's core feature is to notify you before you miss your stop. To do this accurately, the app tracks your location in the <strong>background</strong>. You can enable or disable this permission at any time through your device settings.</p>
+      <h2>3. Location Usage (Foreground Only)</h2>
+      <p>Sonia Buddy uses your location <strong>only while the app is open</strong> to detect proximity to your selected bus stop. We do <strong>not</strong> track your location in the background. You can enable or disable location permission at any time through your device settings.</p>
 
       <h2>4. Data Sharing & Third Parties</h2>
       <p>We do not sell your personal data. We only share information with:</p>
